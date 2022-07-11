@@ -37,7 +37,7 @@ async function getExchange() {
 }
 
 async function getitem() {
-    var result = await getExchange()
+    let result = await getExchange()
     console.log(JSON.stringify(result))
 }
 
