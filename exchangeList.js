@@ -2,7 +2,7 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 const iconv = require('iconv-lite')
 
-const getExchange = async () => {
+async function getExchange() {
     return new Promise(async (resolve, reject) => {
         try {
             let html = await axios({
