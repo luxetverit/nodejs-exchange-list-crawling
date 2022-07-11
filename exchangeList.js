@@ -13,10 +13,9 @@ const getExchange = async () => {
             let exchangeList = []
             const contents = iconv.decode(html.data, 'euc-kr').toString()
             const $ = cheerio.load(contents)
-            const $bodyList = $('div.tbl_area tbody tr') //.find('tbody tr')
+            const $bodyList = $('div.tbl_area tbody tr')
             //console.log($bodyList)
             $bodyList.map(function (i, elem) {
-                //var ele = $(this).text()
                 let nation = String(
                     $(elem)
                         .find('td:nth-of-type(1)')
